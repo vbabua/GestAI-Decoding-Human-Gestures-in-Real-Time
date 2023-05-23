@@ -32,7 +32,9 @@ Here are brief descriptions of the main functions used in this project:
 
 landmarks_detection(frame, holistic_model): This function captures an image frame and utilizes MediaPipe's Holistic model to detect body landmarks in the frame.<br>
 draw_styled_landmarks(image, results): This function visualizes the detected body landmarks on the input image frame.<br>
+
 get_landmarks(action, label, num_sequences, sequence_length, folder_path): This function is used during the data collection phase to gather and save landmarks for each defined action.<br>
+
 extract_keypoints(results): This function processes the output from the MediaPipe Holistic model to extract keypoints from the detected landmarks.<br>
 visualise_probabilities(predictions, actions, input_frame, color_palette): This function visualizes the model's predicted probabilities for each action in real-time on the video feed.<br>
 

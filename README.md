@@ -2,7 +2,7 @@
 
 This repository contains Python code that implements a real-time action recognition system using deep learning and OpenCV. The system captures video from a webcam, detects human body landmarks using MediaPipe's Holistic model, extracts sequences of keypoints from these landmarks, and uses a trained LSTM (Long Short-Term Memory) deep learning model to classify the actions depicted in the sequences.
 
-##Project Structure
+## Project Structure
 The code is organized into several sections:
 
 Import and initialisations: Contains imports of required libraries and initializations of MediaPipe variables.
@@ -15,27 +15,36 @@ Making Predictions: Uses the trained model to make predictions on the test data.
 Evaluation using Confusion Matrix and Accuracy: Evaluates the model's performance using a confusion matrix and accuracy score.
 Using the Model for Real-Time Action Recognition: Uses the trained model to perform real-time action recognition from a webcam feed.
 
-##Usage
+## Usage
 Ensure that you have all required dependencies installed. You can install them using pip:
-'''python
+```python
 pip install opencv-python mediapipe sklearn tensorflow numpy pandas
-'''
+```
 Then, run the script with:
-'''python
+```python
 python action_recognition.py
-'''
+```
 
 During the real-time action recognition phase, press 'q' to quit the program.
 
-##Model
+## Key Functions
+Here are brief descriptions of the main functions used in this project:
+
+landmarks_detection(frame, holistic_model): This function captures an image frame and utilizes MediaPipe's Holistic model to detect body landmarks in the frame.
+draw_styled_landmarks(image, results): This function visualizes the detected body landmarks on the input image frame.
+get_landmarks(action, label, num_sequences, sequence_length, folder_path): This function is used during the data collection phase to gather and save landmarks for each defined action.
+extract_keypoints(results): This function processes the output from the MediaPipe Holistic model to extract keypoints from the detected landmarks.
+visualise_probabilities(predictions, actions, input_frame, color_palette): This function visualizes the model's predicted probabilities for each action in real-time on the video feed.
+
+## Model
 
 The model used in this project is an LSTM network, chosen for its effectiveness in processing sequential data. The model was trained on keypoint data collected and preprocessed by the aforementioned functions.
 
-##Note
+## Note
 
 The model's performance can be improved by collecting more data, adjusting the confidence parameters in the holistic model, fine-tuning the LSTM model architecture, or adjusting the threshold for prediction probability.
 
-##Dependencies
+## Dependencies
 
 OpenCV
 MediaPipe

@@ -56,4 +56,4 @@ This repository contains Python code that implements a real-time action recognit
 3. Perform gestures in front of the webcam, and the program will display the recognized gestures along with the prediction confidence.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/vbabua/GestAI-Decoding-Human-Gestures-in-Real-Time/blob/main/LICENSE) file for details.

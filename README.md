@@ -24,7 +24,7 @@ This repository contains Python code that implements a real-time action recognit
 ## Installation
 1. Clone the repository:
     ```bash
-    https://github.com/vbabua/GestAI-Decoding-Human-Gestures-in-Real-Time.git
+    git clone https://github.com/vbabua/GestAI-Decoding-Human-Gestures-in-Real-Time.git
     ```
 2. Navigate to the project directory:
     ```bash
